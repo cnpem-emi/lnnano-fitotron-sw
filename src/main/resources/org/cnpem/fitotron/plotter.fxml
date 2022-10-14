@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="main_BorderPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.cnpem.fitotron.PlotterController">
+
+    <top>
+
+        <MenuBar fx:id="topMenu_MenuBar">
+
+            <Menu fx:id="file_Menu" text="Arquivo">
+                <MenuItem fx:id="open_MenuItem" onAction="#onOpenMenuItemClick" text="Abrir..." />
+                <SeparatorMenuItem />
+                <MenuItem fx:id="import_MenuItem" onAction="#onImportMenuItemClick" text="Importar (.csv)..." />
+                <SeparatorMenuItem />
+                <MenuItem fx:id="saveAs_MenuItem" onAction="#onSaveAsMenuItemClick" text="Salvar como..." />
+                <MenuItem fx:id="save_MenuItem" onAction="#onSaveMenuItemClick" text="Salvar"/>
+                <SeparatorMenuItem />
+                <MenuItem fx:id="export_MenuItem" onAction="#onExportMenuItemClick" text="Exportar (.csv)..."/>
+                <SeparatorMenuItem />
+                <MenuItem fx:id="exit_MenuItem" onAction="#onExitMenuItemClick" text="Sair" />
+            </Menu>
+
+            <Menu fx:id="show_Menu" text="Exibir">
+
+                <Menu fx:id="points_SubMenu" text="Pontos">
+                    <CheckMenuItem fx:id="pointsNone_CheckMenuItem" onAction="#onPointsCheckMenuItemClick" text="Nenhum" />
+                    <CheckMenuItem fx:id="pointsSquare_CheckMenuItem" onAction="#onPointsCheckMenuItemClick" text="Quadrados" />
+                    <CheckMenuItem fx:id="pointsCircle_CheckMenuItem" onAction="#onPointsCheckMenuItemClick" text="Círculos" />
+                    <CheckMenuItem fx:id="pointsTriangle_CheckMenuItem" onAction="#onPointsCheckMenuItemClick" text="Triângulos" />
+                </Menu>
+
+                <Menu fx:id="confidenceInterval_SubMenu" text="Intervalo de Confiança">
+                    <CheckMenuItem fx:id="confidenceIntervalNone_CheckMenuItem" onAction="#onConfidenceIntervalCheckMenuItemClick" text="Nenhum" />
+                    <CheckMenuItem fx:id="confidenceIntervalSquare_CheckMenuItem" onAction="#onConfidenceIntervalCheckMenuItemClick" text="Quadrados" />
+                    <CheckMenuItem fx:id="confidenceIntervalCircle_CheckMenuItem" onAction="#onConfidenceIntervalCheckMenuItemClick" text="Círculos" />
+                    <CheckMenuItem fx:id="confidenceIntervalTriangle_CheckMenuItem" onAction="#onConfidenceIntervalCheckMenuItemClick" text="Triângulos" />
+                </Menu>
+
+            </Menu>
+
+            <Menu fx:id="help_Menu" text="Ajuda">
+                <MenuItem fx:id="about_MenuItem" onAction="#onAboutMenuItemClick" text="Sobre o software" />
+            </Menu>
+
+        </MenuBar>
+
+    </top>
+
+    <right>
+        <VBox fx:id="toolbox_VBox"/>
+    </right>
+
+    <center>
+        <StackPane fx:id="center_StackPane"/>
+    </center>
+
+    <bottom>
+
+        <ScrollPane fx:id="log_ScrollPane" prefHeight="150" style="-fx-background: #FFFFFF;">
+
+            <BorderPane.margin>
+                <Insets bottom="10" left="8" right="8" top="2" />
+            </BorderPane.margin>
+
+            <TextFlow fx:id="log_TextFlow">
+                <padding>
+                    <Insets left="5" top="3" />
+                </padding>
+                <!--As saídas de texto serão exibidas durante o tempo de execução-->
+            </TextFlow>
+
+        </ScrollPane>
+
+    </bottom>
+
+</BorderPane>

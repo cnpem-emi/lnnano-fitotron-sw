@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.cnpem.fitotron.AboutController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: #FFFFFF;">
+
+    <headerText>
+        Sobre o LNnano - Fitotron
+    </headerText>
+    <content>
+
+        <GridPane alignment="CENTER">
+            <padding>
+                <Insets top="20" bottom="20" left="20" right="20"/>
+            </padding>
+
+            <ImageView fitHeight="50.0"
+                       fitWidth="50.0"
+                       preserveRatio="true"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="0"
+                        GridPane.rowSpan="2">
+                <image>
+                    <Image url="@images/icon.png"/>
+                </image>
+            </ImageView>
+            <Label text="Centro Nacional de Pesquisa em Energia e Materiais (CNPEM)"
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="1"
+                   style="-fx-text-fill: #000000; -fx-font-size : 16px;">
+                <padding>
+                    <Insets left="10" top="10"/>
+                </padding>
+            </Label>
+            <TextFlow
+                   GridPane.rowIndex="2"
+                   GridPane.columnIndex="1">
+                <padding>
+                    <Insets left="10" bottom="10"/>
+                </padding>
+                <Text
+                        text="Versão do Software: V2022.09.19-BETA"
+                />
+            </TextFlow>
+            <Label text="Todos os direitos reservados © 1997-2022"
+                   GridPane.halignment="CENTER"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="1"
+                   style="-fx-text-fill: #000000; -fx-font-size : 12px;">
+                <padding>
+                    <Insets top="10"/>
+                </padding>
+            </Label>
+        </GridPane>
+    </content>
+
+</DialogPane>
