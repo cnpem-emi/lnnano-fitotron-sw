@@ -49,7 +49,7 @@
                     <Insets left="10" bottom="10"/>
                 </padding>
                 <Text
-                        text="Versão do Software: V2022.09.19-BETA"
+                        text="Versão do Software: V2022.10.26-BETA"
                 />
             </TextFlow>
             <Label text="Todos os direitos reservados © 1997-2022"

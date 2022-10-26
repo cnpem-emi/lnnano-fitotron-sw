@@ -360,7 +360,7 @@ public class FitotronData{
 
         private double error(int n, double standardDeviation){
 
-            if(n==0) return 0;
+            if(n<2) return 0;
 
             TDistribution tDistribution = new TDistribution(n-1);
 
